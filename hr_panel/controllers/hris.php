@@ -20,7 +20,7 @@ class Hris extends CI_Controller {
 
     // For Index Page hris
     public function index() {
-
+        echo 'test';
         $this->load->view('hris/landing.php');
     }
     public function login_s($company_id) {
