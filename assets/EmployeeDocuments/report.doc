@@ -1,0 +1,17 @@
+ <div class="control-group">
+                                                    <label style="width: 130px;" class="control-label" for="email">Status:<img src="<?php echo base_url()?>assets/img/star.jpg" width="6"/></label>
+                                                    <div class="controls" style="margin-left: 140px;">
+                                                        <div class="span12">
+                                                            <select style="width: 200px;" id="status" name="status" class="select2" data-placeholder="Click to Choose...">
+                                                                <option value="1">Active</option>
+                                                                <option value="2">De-Active</option>
+                                                                <option value="0">All</option>                                                                   
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                  </div> 
+
+
+if($status == 1){$statuss = "AND students.status = 'ok'";}
+        if($status == 2){$statuss = "AND students.status != 'ok'";}
+        if($status == 0){$statuss = "";}
