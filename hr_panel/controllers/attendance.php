@@ -1302,5 +1302,14 @@ class Attendance extends CI_Controller {
        
         
     }
+     function add_attendance_policy(){
+         $company = $this->session->userdata('company_id');
+           $result['company'] = $this->Hris_model->getCampany();
+
+        $this->load->view('hris_ace/hris_header');
+        $this->load->view('hris_ace/hris_side_menu');
+        $this->load->view('attendance/att_policy', $result);
+        $this->load->view('hris_ace/hris_footer');
+    }
     
 }
